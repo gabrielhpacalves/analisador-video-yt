@@ -1,3 +1,38 @@
+Analisador de Vídeos do YouTube
+Este projeto é um script em Python que automatiza o processo de resumo de vídeos do YouTube. Ele baixa o áudio de um vídeo, transcreve o conteúdo usando a API do Whisper da OpenAI e, em seguida, gera um resumo do texto com a API do GPT.
+
+Como Funciona
+Baixa o áudio: Utiliza a biblioteca pytubefix para baixar o áudio de um vídeo do YouTube.
+
+Transcreve o áudio: Usa a API do Whisper da OpenAI para converter o áudio para texto.
+
+Resume o texto: Envia o texto transcrito para a API do GPT da OpenAI para gerar um resumo conciso.
+
+Como Rodar o Projeto
+Para usar este projeto, você precisará ter o Python e o FFmpeg instalados, além de uma chave de API da OpenAI.
+
+1. Configurar o Ambiente
+Primeiro, clone este repositório para o seu computador:
+
+git clone https://github.com/SEU_USUARIO/analisador-youtube.git
+cd analisador-youtube
+
+Substitua SEU_USUARIO pelo seu nome de usuário no GitHub.
+
+Em seguida, crie e ative um ambiente virtual para isolar as dependências:
+
+# Para Windows
+python -m venv venv
+.\venv\Scripts\activate
+
+# Para macOS e Linux
+python3 -m venv venv
+source venv/bin/activate
+
+2. Instalar as Bibliotecas Python
+Com o ambiente virtual ativado, instale as bibliotecas necessárias:
+
+pip install pytubefix openai
 
 3. Instalar o FFmpeg
 Este projeto depende do FFmpeg para processamento de áudio. Siga as instruções no site oficial para instalá-lo e adicioná-lo à variável de ambiente PATH do seu sistema.
